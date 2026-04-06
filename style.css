@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+
+  /* 🎨 default colors */
+  --c1: #74ebd5;
+  --c2: #ACB6E5;
+
+  background: linear-gradient(270deg, var(--c1), var(--c2));
+  background-size: 400% 400%;
+
+  animation: moveGradient 8s ease infinite;
+}
+
+/* 🔥 animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* UI box */
+
+.box {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  color: white;
+
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🧊 3D hover */
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,0,0,0.5);
+}
+
+
+input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  font: 1em sans-serif;
+  font-weight: 400;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00eaff;
+  color: black;
+}
+
+#result {
+  margin-top: 20px;
+}
