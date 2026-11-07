@@ -9,7 +9,7 @@ btn.onclick = async function () {
     return;
   }
 
-  let apiKey = "70df1bb17cb723058138960635dabef2"; // 👈 apni key daal
+  let apiKey = "70df1bb17cb723058138960635dabef2"; 
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
